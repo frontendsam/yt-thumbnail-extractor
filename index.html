@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Thumbnail Fetcher Tool</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="splash">
+      <h2>
+        <span>Youtube</span>
+        <span>Thumbnail</span>
+        <span>Fetcher</span>
+      </h2>
+      <img src="./assets/video-icon.svg" alt="" srcset="" />
+    </div>
+
+    <header>
+      <input
+        type="text"
+        name=""
+        id="youtubeLink"
+        placeholder="https://www.youtube.com/watch?v=XK7T3mY1V-w"
+      />
+      <form action="">
+        <div class="quality">
+          <div class="group">
+            <input
+              type="radio"
+              name="quality"
+              id="default"
+              value="default"
+              hidden
+            /><label for="default">120x90</label>
+          </div>
+          <div class="group">
+            <input
+              type="radio"
+              name="quality"
+              id="mqdefault"
+              value="mqdefault"
+              hidden
+            /><label for="mqdefault">320x180</label>
+          </div>
+          <div class="group">
+            <input
+              type="radio"
+              name="quality"
+              id="hqdefault"
+              value="hqdefault"
+              hidden
+            /><label for="hqdefault">480x360</label>
+          </div>
+          <div class="group">
+            <input
+              type="radio"
+              name="quality"
+              id="sddefault"
+              value="sddefault"
+              hidden
+            /><label for="sddefault">640x480</label>
+          </div>
+          <div class="group">
+            <input
+              type="radio"
+              name="quality"
+              id="maxresdefault"
+              value="maxresdefault"
+              hidden
+            /><label for="maxresdefault">1280x720</label>
+          </div>
+        </div>
+      </form>
+    </header>
+
+    <section>
+      <div class="btnGroup">
+        <a href="#" class="btn" id="grabber">Fetch Thumbnail</a>
+      </div>
+
+      <div class="output">
+        <p class="_note">right click on the image & hit save image as</p>
+        <canvas id="result" width="120" height="90"></canvas>
+      </div>
+    </section>
+
+    <!--JS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./animation.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
